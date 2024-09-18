@@ -257,9 +257,9 @@
           </div>
 
           <!-- Payment Method Section -->
-          <div class="mb-8 border rounded bg-white p-3 shadow-xl">
-            <h2 class="text-xl font-semibold mb-4">Payment Method</h2>
-            <div class="flex flex-col gap-4">
+          <div class="mb-8 border rounded bg-white  shadow-xl">
+            <h2 class="text-xl font-semibold p-3 mb-4 bg-[#e1e0e078]">Payment Method</h2>
+            <div class="flex flex-col gap-4 p-3">
               <!-- Cash on Delivery -->
               <label
                 class="radio-custom flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow"
@@ -303,17 +303,28 @@
                   />
                 </span>
               </label>
+              <p class="my-2 ">প্রিয় গ্রাহক, দেশের বর্তমান পরিস্থিতির কারণে আপনার অর্ডারকৃত পণ্যের ডেলিভারিতে কিছুটা বিলম্ব হতে পারে। আমরা আপনার অর্ডারটি যত দ্রুত সম্ভব পৌঁছে দেওয়ার জন্য সর্বোচ্চ চেষ্টা করছি পনাদের সকলের সহযোগিতা ও ধৈর্য্য কামনা করছি সাময়িক অসুবিধার জন্য আমরা আন্তরিকভাবে দুঃখিত।</p>
+              <label
+                class="radio-custom flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <input type="radio" name="payment" value="others" />
+                <span class="radio-label flex items-center">
+              
+                  <!-- <span class="text-lg font-medium">Other Payment Methods</span> -->
+                  প্রতিদিনমার্ট এর শর্তাবলীতে সম্মতি প্রদান করছি ৷ শর্তাবলী
+                </span>
+              </label>
+            </div>
+            <div class="ms-auto w-full text-right mt-2 ">
+              <button
+                class="bg-blue-500 mb-2 text-white me-10 px-6 py-2 rounded hover:bg-blue-700"
+              >
+                Confirm Order
+              </button>
             </div>
           </div>
 
           <!-- Confirm Order Button -->
-          <div class="mt-4">
-            <button
-              class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-700"
-            >
-              Confirm Order
-            </button>
-          </div>
         </div>
 
         <!-- Right Side: Checkout Summary -->
