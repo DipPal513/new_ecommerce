@@ -56,7 +56,7 @@ footer {
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensures the header stays on top */
-  }
+}
   .header {
     transition: background-color 0.3s ease;
   }

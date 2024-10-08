@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <link href="./dist/indext.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+ <!-- header -->
+ <header class="shadow bg-white">
+    <div class="bg-[#FF79C8]">
+      <div
+        class="topHeader px-2 max-w-screen-xl flex items-center justify-between mx-auto py-2"
+      >
+        <div class="hidden sm:flex items-center gap-4 ">
+          <p>0123455678</p>
+          <p>abcdef@gmail.com</p>
+        </div>
+        <div>
+          <button
+            class="bg-blue-500 px-3 py-1 hover:bg-blue-700 transition-all duration-300 rounded text-white"
+          >
+            পাইকারি
+          </button>
+          <button
+            class="hover:bg-blue-700 transition-all duration-300 bg-blue-500 px-3 py-1 rounded text-white"
+          >
+            খুচরা
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="max-w-screen-xl mx-auto flex py-3 justify-between px-2">
+        <a
+          href="./index.html"
+          class="logo w-full basis-1/2 md:w-auto flex justify-center md:justify-start"
+        >
+          <img src="./images/logo.jpg" alt="logo" class="h-12" />
+        </a>
+
+        <div
+          class="search w-full md:w-auto hidden sm:flex basis-full justify-center items-center mt-3 mx-5 md:mx-0 order-3 md:order-none md:mt-0"
+        >
+          <input
+            type="text"
+            placeholder="Search for Style, Collections & more"
+            class="border-black border-2 px-3 py-2 rounded-l-lg w-full md:w-auto"
+          />
+          <button
+            class="bg-black text-white px-3 py-2 border-2 border-black rounded-r-lg"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div
+          class="icons w-full md:w-auto flex items-center justify-center md:justify-end text-xl gap-4 mt-3 md:mt-0 relative basis-1/2"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          <i
+            class="fa-solid fa-circle-user userIcon cursor-pointer"
+            onclick="toggleDropdown()"
+          ></i>
+          <!-- <i class="fa-regular fa-heart"></i> -->
+          <a href="./cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <sup class="font-bold rounded-full">0</sup>
+          </a>
+
+          <!-- Dropdown Menu -->
+          <div
+  id="userDropdown"
+  class="absolute right-0 top-[160%] w-48 bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+>
+  <ul class="py-2">
+    <li>
+      <a href="/profile" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-user mr-2 text-gray-500"></i> <!-- Font Awesome Profile Icon -->
+        <span>Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href="/orders" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-box mr-2 text-gray-500"></i> <!-- Font Awesome Orders Icon -->
+        <span>Orders</span>
+      </a>
+    </li>
+    <li>
+      <a href="/logout" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-sign-out-alt mr-2 text-gray-500"></i> <!-- Font Awesome Logout Icon -->
+        <span>Logout</span>
+      </a>
+    </li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="search w-[90vw] md:w-auto sm:hidden flex justify-center items-center mt-3 mx-5 md:mt-0 mb-3"
+    >
+      <input
+        type="text"
+        placeholder="Search for Style, Collections & more"
+        class="border-black border-2 px-3 py-2 rounded-l-lg w-full md:w-auto"
+      />
+      <button
+        class="bg-black text-white px-3 py-2 border-2 border-black rounded-r-lg"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- header -->
+  <!-- My Orders Section -->
+  <section class="max-w-4xl mx-auto p-6 mt-6  rounded-md ">
+    
+   <div class="bg-white shadow-lg pt-5">
+    <div class="flex flex-col bg-white  sm:flex-row justify-between items-center mb-4">
+      <h1 class="text-xl font-bold mb-4 sm:mb-0">
+        My Orders 
+        <span class="text-sm font-normal">(Your Total Order: 2)</span>
+      </h1>
+      <button class="bg-green-500 text-white px-4 py-2 rounded-md flex items-center space-x-2">
+        <i class="fa fa-book"></i>
+        <span>Read Bestseller eBook</span>
+        <i class="fa fa-arrow-down"></i>
+      </button>
+    </div>
+
+    <!-- Status Filter -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+      <div class="flex items-center space-x-3 mb-4 sm:mb-0">
+        <select class="border border-gray-300 rounded-md py-2 px-3">
+          <option>Select Any</option>
+          <option>Completed</option>
+          <option>Returned</option>
+        </select>
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded-md">Submit</button>
+      </div>
+    </div>
+
+    <!-- Orders List -->
+    <div class="space-y-6">
+
+      <!-- Order 1 -->
+      <div class="p-4 bg-white ">
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+          <p>Your Order ID: 
+            <a href="#" class="text-green-600">77167272187028</a> (1 items)
+          </p>
+          <div class="flex space-x-2">
+            <span class="bg-green-500 text-white px-3 py-1 rounded-md">COMPLETED</span>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded-md flex items-center">
+              <i class="fa fa-location-arrow mr-2"></i> Track My Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="flex flex-col items-start">
+          <img src="https://via.placeholder.com/100x150" alt="PHP Book" class="w-24 h-36 object-cover rounded-md mb-2">
+          <h2 class="text-sm font-semibold">পিএইচপি ওয়েব প্রোগ্রামিং</h2>
+          <p class="text-gray-500">TK. 345 <span class="text-red-600">(25% Off)</span></p>
+        </div>
+      </div>
+
+      <!-- Order 2 -->
+      <div class="p-4 bg-gray-50 rounded-md shadow-md">
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+          <p>Your Order ID: 
+            <a href="#" class="text-green-600">37167242941484</a> (2 items)
+          </p>
+          <div class="flex space-x-2">
+            <span class="bg-red-500 text-white px-3 py-1 rounded-md">RETURNED</span>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div class="flex flex-col space-y-4">
+          <!-- Product 1 -->
+          <div class="flex flex-col items-left">
+            <img src="https://via.placeholder.com/100x150" alt="Wild Stone" class="w-24 h-36 object-cover rounded-md mb-2">
+            <h2 class="text-sm font-semibold">Wild Stone Concentrate</h2>
+            <p class="text-gray-500">TK. 181 <span class="text-red-600">(5% Off)</span></p>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="flex flex-col items-left">
+            <img src="https://via.placeholder.com/100x150" alt="Fake Book" class="w-24 h-36 object-cover rounded-md mb-2">
+            <h2 class="text-sm font-semibold">Fake - MM Export Ed.</h2>
+            <p class="text-gray-500">TK. 718 <span class="text-red-600">(20% Off)</span></p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+  </section>
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-6">
+      <!-- Column 1: DESIGNER WEAR -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">DESIGNER WEAR</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Salwar Kameez</a></li>
+          <li class="mb-2"><a href="#">Sharees</a></li>
+          <li class="mb-2"><a href="#">Lehengas</a></li>
+          <li class="mb-2"><a href="#">Gowns</a></li>
+          <li class="mb-2"><a href="#">Kidswear</a></li>
+          <li class="mb-2"><a href="#">Saree Blouse</a></li>
+          <li class="mb-2"><a href="#">Kurtis</a></li>
+          <li class="mb-2"><a href="#">Indowestern Styles</a></li>
+          <li class="mb-2"><a href="#">Men's</a></li>
+          <li class="mb-2"><a href="#">Accessories</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Influencers</a></li>
+          <li class="mb-2"><a href="#">Celebrity Wear</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: ABOUT US -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">ABOUT US</h3>
+        <ul>
+          <li class="mb-2"><a href="#">About Us</a></li>
+          <li class="mb-2"><a href="#">Contact Us</a></li>
+          <li class="mb-2"><a href="#">Blog</a></li>
+          <li class="mb-2"><a href="#">Web Stories</a></li>
+          <li class="mb-2"><a href="#">Testimonial</a></li>
+          <li class="mb-2"><a href="#">Press</a></li>
+          <li class="mb-2"><a href="#">Look book</a></li>
+          <li class="mb-2"><a href="#">Careers</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Boutique</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Fashion Show</a></li>
+          <li class="mb-2"><a href="#">Video Call Appointment</a></li>
+          <li class="mb-2"><a href="#">Buying Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: POLICIES -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">POLICIES</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Terms & Conditions</a></li>
+          <li class="mb-2"><a href="#">Shipping</a></li>
+          <li class="mb-2"><a href="#">Returns</a></li>
+          <li class="mb-2"><a href="#">Privacy Policy</a></li>
+          <li class="mb-2"><a href="#">Privacy Policy For APP</a></li>
+          <li class="mb-2"><a href="#">Payment Policy</a></li>
+          <li class="mb-2"><a href="#">FAQ’s</a></li>
+          <li class="mb-2"><a href="#">Customization Charges</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: MY ACCOUNT -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">MY ACCOUNT</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Shopping Bag</a></li>
+          <li class="mb-2"><a href="#">Wishlist</a></li>
+          <li class="mb-2"><a href="#">Order History</a></li>
+          <li class="mb-2"><a href="#">Order Tracking</a></li>
+          <li class="mb-2"><a href="#">Buy In Bulk</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: FOLLOW US -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">FOLLOW US</h3>
+        <div class="flex space-x-4 mb-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg mb-2">CONTACT US</h3>
+          <p class="text-gray-400">Phone: +123 456 7890</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom section: All Rights Reserved -->
+    <div class="mt-8 text-center text-gray-500 text-sm">
+      <p>&copy; 2024 ALTABANU. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./dist/main.js"></script>
+</body>
+</html>

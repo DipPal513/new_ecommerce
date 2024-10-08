@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracking</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="./dist/indext.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+ <!-- header -->
+ <header class="shadow bg-white">
+    <div class="bg-[#FF79C8]">
+      <div
+        class="topHeader px-2 max-w-screen-xl flex items-center justify-between mx-auto py-2"
+      >
+        <div class="hidden sm:flex items-center gap-4 ">
+          <p>0123455678</p>
+          <p>abcdef@gmail.com</p>
+        </div>
+        <div>
+          <button
+            class="bg-blue-500 px-3 py-1 hover:bg-blue-700 transition-all duration-300 rounded text-white"
+          >
+            পাইকারি
+          </button>
+          <button
+            class="hover:bg-blue-700 transition-all duration-300 bg-blue-500 px-3 py-1 rounded text-white"
+          >
+            খুচরা
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="max-w-screen-xl mx-auto flex py-3 justify-between px-2">
+        <a
+          href="./index.html"
+          class="logo w-full basis-1/2 md:w-auto flex justify-center md:justify-start"
+        >
+          <img src="./images/logo.jpg" alt="logo" class="h-12" />
+        </a>
+
+        <div
+          class="search w-full md:w-auto hidden sm:flex basis-full justify-center items-center mt-3 mx-5 md:mx-0 order-3 md:order-none md:mt-0"
+        >
+          <input
+            type="text"
+            placeholder="Search for Style, Collections & more"
+            class="border-black border-2 px-3 py-2 rounded-l-lg w-full md:w-auto"
+          />
+          <button
+            class="bg-black text-white px-3 py-2 border-2 border-black rounded-r-lg"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div
+          class="icons w-full md:w-auto flex items-center justify-center md:justify-end text-xl gap-4 mt-3 md:mt-0 relative basis-1/2"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          <i
+            class="fa-solid fa-circle-user userIcon cursor-pointer"
+            onclick="toggleDropdown()"
+          ></i>
+          <!-- <i class="fa-regular fa-heart"></i> -->
+          <a href="./cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <sup class="font-bold rounded-full">0</sup>
+          </a>
+
+          <!-- Dropdown Menu -->
+          <div
+  id="userDropdown"
+  class="absolute right-0 top-[160%] w-48 bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+>
+  <ul class="py-2">
+    <li>
+      <a href="/profile" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-user mr-2 text-gray-500"></i> <!-- Font Awesome Profile Icon -->
+        <span>Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href="/orders" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-box mr-2 text-gray-500"></i> <!-- Font Awesome Orders Icon -->
+        <span>Orders</span>
+      </a>
+    </li>
+    <li>
+      <a href="/logout" class="flex items-center px-4 py-2 hover:bg-gray-100 transition-colors">
+        <i class="fas fa-sign-out-alt mr-2 text-gray-500"></i> <!-- Font Awesome Logout Icon -->
+        <span>Logout</span>
+      </a>
+    </li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="search w-[90vw] md:w-auto sm:hidden flex justify-center items-center mt-3 mx-5 md:mt-0 mb-3"
+    >
+      <input
+        type="text"
+        placeholder="Search for Style, Collections & more"
+        class="border-black border-2 px-3 py-2 rounded-l-lg w-full md:w-auto"
+      />
+      <button
+        class="bg-black text-white px-3 py-2 border-2 border-black rounded-r-lg"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- header -->
+  <div class="max-w-screen-lg mx-auto mt-12 p-6  shadow-lg rounded-lg">
+    <!-- Order Tracking Timeline -->
+    <div class="flex items-start space-x-6">
+      <!-- Left Side Icons -->
+      <div class="space-y-10">
+        <i class="fas fa-shopping-cart text-blue-500 text-xl"></i>
+        <i class="fas fa-check-circle text-green-500 text-xl"></i>
+        <i class="fas fa-box text-yellow-500 text-xl"></i>
+        <i class="fas fa-truck text-orange-500 text-xl"></i>
+        <i class="fas fa-box-open text-purple-500 text-xl"></i>
+      </div>
+
+      <!-- Right Side Timeline -->
+      <div class="w-full">
+        <div class="space-y-10">
+          <!-- Order Placed -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="bg-blue-500 w-4 h-4 rounded-full"></div>
+            </div>
+            <div class="ml-4">
+              <p class="text-blue-500 font-semibold">Order Placed</p>
+              <p class="text-sm text-gray-500">Your order has been placed successfully.</p>
+            </div>
+          </div>
+
+          <!-- Order Approved -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="bg-green-500 w-4 h-4 rounded-full"></div>
+            </div>
+            <div class="ml-4">
+              <p class="text-green-500 font-semibold">Order Approved</p>
+              <p class="text-sm text-gray-500">Your order has been approved.</p>
+            </div>
+          </div>
+
+          <!-- Order Ready to Ship -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="bg-yellow-500 w-4 h-4 rounded-full"></div>
+            </div>
+            <div class="ml-4">
+              <p class="text-yellow-500 font-semibold">Order Ready to Ship</p>
+              <p class="text-sm text-gray-500">Your order is packed and ready to ship.</p>
+            </div>
+          </div>
+
+          <!-- Order Handover to Courier -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
+            </div>
+            <div class="ml-4">
+              <p class="text-orange-500 font-semibold">Order Handover to Courier</p>
+              <p class="text-sm text-gray-500">Your order has been handed over to the courier.</p>
+            </div>
+          </div>
+
+          <!-- Order Delivered -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="bg-purple-500 w-4 h-4 rounded-full"></div>
+            </div>
+            <div class="ml-4">
+              <p class="text-purple-500 font-semibold">Order Delivered</p>
+              <p class="text-sm text-gray-500">Your order has been delivered successfully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="mt-8 p-6 bg-gray-50 shadow rounded-lg">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Order Summary</h2>
+      <div class="space-y-4">
+        <div class="flex justify-between">
+          <p class="text-gray-600">Total Quantity</p>
+          <p class="font-semibold text-gray-700">3</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-600">Sub Total</p>
+          <p class="font-semibold text-gray-700">$150.00</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-600">Shipping</p>
+          <p class="font-semibold text-gray-700">$15.00</p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-gray-600">Payable Amount</p>
+          <p class="font-semibold text-gray-700">$165.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-6">
+      <!-- Column 1: DESIGNER WEAR -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">DESIGNER WEAR</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Salwar Kameez</a></li>
+          <li class="mb-2"><a href="#">Sharees</a></li>
+          <li class="mb-2"><a href="#">Lehengas</a></li>
+          <li class="mb-2"><a href="#">Gowns</a></li>
+          <li class="mb-2"><a href="#">Kidswear</a></li>
+          <li class="mb-2"><a href="#">Saree Blouse</a></li>
+          <li class="mb-2"><a href="#">Kurtis</a></li>
+          <li class="mb-2"><a href="#">Indowestern Styles</a></li>
+          <li class="mb-2"><a href="#">Men's</a></li>
+          <li class="mb-2"><a href="#">Accessories</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Influencers</a></li>
+          <li class="mb-2"><a href="#">Celebrity Wear</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: ABOUT US -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">ABOUT US</h3>
+        <ul>
+          <li class="mb-2"><a href="#">About Us</a></li>
+          <li class="mb-2"><a href="#">Contact Us</a></li>
+          <li class="mb-2"><a href="#">Blog</a></li>
+          <li class="mb-2"><a href="#">Web Stories</a></li>
+          <li class="mb-2"><a href="#">Testimonial</a></li>
+          <li class="mb-2"><a href="#">Press</a></li>
+          <li class="mb-2"><a href="#">Look book</a></li>
+          <li class="mb-2"><a href="#">Careers</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Boutique</a></li>
+          <li class="mb-2"><a href="#">ALTABANU Fashion Show</a></li>
+          <li class="mb-2"><a href="#">Video Call Appointment</a></li>
+          <li class="mb-2"><a href="#">Buying Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: POLICIES -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">POLICIES</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Terms & Conditions</a></li>
+          <li class="mb-2"><a href="#">Shipping</a></li>
+          <li class="mb-2"><a href="#">Returns</a></li>
+          <li class="mb-2"><a href="#">Privacy Policy</a></li>
+          <li class="mb-2"><a href="#">Privacy Policy For APP</a></li>
+          <li class="mb-2"><a href="#">Payment Policy</a></li>
+          <li class="mb-2"><a href="#">FAQ’s</a></li>
+          <li class="mb-2"><a href="#">Customization Charges</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: MY ACCOUNT -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">MY ACCOUNT</h3>
+        <ul>
+          <li class="mb-2"><a href="#">Shopping Bag</a></li>
+          <li class="mb-2"><a href="#">Wishlist</a></li>
+          <li class="mb-2"><a href="#">Order History</a></li>
+          <li class="mb-2"><a href="#">Order Tracking</a></li>
+          <li class="mb-2"><a href="#">Buy In Bulk</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: FOLLOW US -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">FOLLOW US</h3>
+        <div class="flex space-x-4 mb-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg mb-2">CONTACT US</h3>
+          <p class="text-gray-400">Phone: +123 456 7890</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom section: All Rights Reserved -->
+    <div class="mt-8 text-center text-gray-500 text-sm">
+      <p>&copy; 2024 ALTABANU. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./dist/main.js"></script>
+</body>
+</html>
