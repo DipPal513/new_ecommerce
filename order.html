@@ -117,43 +117,45 @@
 
   <!-- header -->
   <!-- My Orders Section -->
-  <section class="max-w-4xl mx-auto p-6 mt-6  rounded-md ">
-    
-   <div class="bg-white shadow-lg pt-5">
-    <div class="flex flex-col bg-white  sm:flex-row justify-between items-center mb-4">
-      <h1 class="text-xl font-bold mb-4 sm:mb-0">
-        My Orders 
-        <span class="text-sm font-normal">(Your Total Order: 2)</span>
-      </h1>
-      <button class="bg-green-500 text-white px-4 py-2 rounded-md flex items-center space-x-2">
-        <i class="fa fa-book"></i>
-        <span>Read Bestseller eBook</span>
-        <i class="fa fa-arrow-down"></i>
-      </button>
-    </div>
-
-    <!-- Status Filter -->
-    <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
-      <div class="flex items-center space-x-3 mb-4 sm:mb-0">
-        <select class="border border-gray-300 rounded-md py-2 px-3">
-          <option>Select Any</option>
-          <option>Completed</option>
-          <option>Returned</option>
-        </select>
-        <button class="bg-yellow-500 text-white px-4 py-2 rounded-md">Submit</button>
+  <section class="max-w-4xl mx-auto p-2 sm:p-6 mt-6  rounded-md ">
+    <div class="bg-white shadow-xl flex mb-3 flex-wrap items-center justify-between px-2 py-2">
+      <div class="flex flex-col bg-white  sm:flex-row justify-between items-center mb-4">
+        <h1 class="text-xl font-bold mb-4 sm:mb-0">
+          My Orders 
+          <span class="text-sm font-normal">(Your Total Order: 2)</span>
+        </h1>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-md flex items-center space-x-2">
+          <i class="fa fa-book"></i>
+          <span class="inline-block mx-2">Read Bestseller eBook</span>
+          <i class="fa fa-arrow-down"></i>
+        </button>
+      </div>
+  
+      <!-- Status Filter -->
+      <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <div class="flex items-center gap-3 space-x-3 mb-4 sm:mb-0">
+          <select class="border border-gray-300 rounded-md py-2 px-3">
+            <option>Select Any</option>
+            <option>Completed</option>
+            <option>Returned</option>
+          </select>
+          <button class="bg-yellow-500 ml-2 text-white px-4 py-2 rounded-md">Submit</button>
+        </div>
       </div>
     </div>
+   <div class="bg-white shadow-lg pt-5">
+ 
 
     <!-- Orders List -->
     <div class="space-y-6">
 
       <!-- Order 1 -->
       <div class="p-4 bg-white ">
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
           <p>Your Order ID: 
             <a href="#" class="text-green-600">77167272187028</a> (1 items)
           </p>
-          <div class="flex space-x-2">
+          <div class="flex space-x-2 gap-3 mt-3">
             <span class="bg-green-500 text-white px-3 py-1 rounded-md">COMPLETED</span>
             <button class="bg-blue-500 text-white px-3 py-1 rounded-md flex items-center">
               <i class="fa fa-location-arrow mr-2"></i> Track My Order
