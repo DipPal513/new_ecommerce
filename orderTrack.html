@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Tracking</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <link href="./dist/indext.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
  <!-- header -->
- <header class="shadow bg-white">
+  <header class="shadow bg-white">
     <div class="bg-[#FF79C8]">
       <div
         class="topHeader px-2 max-w-screen-xl flex items-center justify-between mx-auto py-2"
@@ -114,104 +114,118 @@
       </button>
     </div>
   </header>
-
   <!-- header -->
-  <div class="max-w-screen-lg mx-auto mt-12 p-6  shadow-lg rounded-lg">
-    <!-- Order Tracking Timeline -->
-    <div class="flex items-start space-x-6">
-      <!-- Left Side Icons -->
-      <div class="space-y-10">
-        <i class="fas fa-shopping-cart text-blue-500 text-xl"></i>
-        <i class="fas fa-check-circle text-green-500 text-xl"></i>
-        <i class="fas fa-box text-yellow-500 text-xl"></i>
-        <i class="fas fa-truck text-orange-500 text-xl"></i>
-        <i class="fas fa-box-open text-purple-500 text-xl"></i>
-      </div>
+  <!-- main -->
+  <div class="max-w-screen-lg mx-auto mt-12  rounded-lg">
+    <div class="flex flex-col">
+        <!-- Vertical Order Tracking Timeline -->
+        <div class="bg-white rounded-lg shadow-lg mb-5 p-3 sm:p-6">
+            <h2 class="text-lg font-semibold text-gray-700 mb-6">Order Tracking</h2>
+            <div class="space-y-10">
+                <!-- Order Placed -->
+                <div class="flex items-center">
+                    <i class="fas fa-shopping-cart text-blue-500 text-3xl"></i>
+                    <div class="ml-4">
+                        <p class="text-blue-500 font-semibold">Order Placed</p>
+                        <p class="text-sm text-gray-500">Your order has been placed successfully.</p>
+                    </div>
+                </div>
+                <div class="h-10 border-l-4 border-blue-500 ml-5"></div>
 
-      <!-- Right Side Timeline -->
-      <div class="w-full">
-        <div class="space-y-10">
-          <!-- Order Placed -->
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <div class="bg-blue-500 w-4 h-4 rounded-full"></div>
-            </div>
-            <div class="ml-4">
-              <p class="text-blue-500 font-semibold">Order Placed</p>
-              <p class="text-sm text-gray-500">Your order has been placed successfully.</p>
-            </div>
-          </div>
+                <!-- Order Approved -->
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 text-3xl"></i>
+                    <div class="ml-4">
+                        <p class="text-green-500 font-semibold">Order Approved</p>
+                        <p class="text-sm text-gray-500">Your order has been approved.</p>
+                    </div>
+                </div>
+                <div class="h-10 border-l-4 border-green-500 ml-5"></div>
 
-          <!-- Order Approved -->
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <div class="bg-green-500 w-4 h-4 rounded-full"></div>
-            </div>
-            <div class="ml-4">
-              <p class="text-green-500 font-semibold">Order Approved</p>
-              <p class="text-sm text-gray-500">Your order has been approved.</p>
-            </div>
-          </div>
+                <!-- Ready to Ship -->
+                <div class="flex items-center">
+                    <i class="fas fa-box text-yellow-500 text-3xl"></i>
+                    <div class="ml-4">
+                        <p class="text-yellow-500 font-semibold">Ready to Ship</p>
+                        <p class="text-sm text-gray-500">Your order is packed and ready to ship.</p>
+                    </div>
+                </div>
+                <div class="h-10 border-l-4 border-yellow-500 ml-5"></div>
 
-          <!-- Order Ready to Ship -->
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <div class="bg-yellow-500 w-4 h-4 rounded-full"></div>
-            </div>
-            <div class="ml-4">
-              <p class="text-yellow-500 font-semibold">Order Ready to Ship</p>
-              <p class="text-sm text-gray-500">Your order is packed and ready to ship.</p>
-            </div>
-          </div>
+                <!-- Handover to Courier -->
+                <div class="flex items-center">
+                    <i class="fas fa-truck text-orange-500 text-3xl"></i>
+                    <div class="ml-4">
+                        <p class="text-orange-500 font-semibold">Handover to Courier</p>
+                        <p class="text-sm text-gray-500">Your order has been handed over to the courier.</p>
+                    </div>
+                </div>
+                <div class="h-10 border-l-4 border-orange-500 ml-5"></div>
 
-          <!-- Order Handover to Courier -->
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
+                <!-- Order Delivered -->
+                <div class="flex items-center">
+                    <i class="fas fa-box-open text-purple-500 text-3xl"></i>
+                    <div class="ml-4">
+                        <p class="text-purple-500 font-semibold">Delivered</p>
+                        <p class="text-sm text-gray-500">Your order has been delivered successfully.</p>
+                    </div>
+                </div>
             </div>
-            <div class="ml-4">
-              <p class="text-orange-500 font-semibold">Order Handover to Courier</p>
-              <p class="text-sm text-gray-500">Your order has been handed over to the courier.</p>
-            </div>
-          </div>
-
-          <!-- Order Delivered -->
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <div class="bg-purple-500 w-4 h-4 rounded-full"></div>
-            </div>
-            <div class="ml-4">
-              <p class="text-purple-500 font-semibold">Order Delivered</p>
-              <p class="text-sm text-gray-500">Your order has been delivered successfully.</p>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <!-- Purchased Products and Order Summary -->
+        <div class="bg-white p-3 rounded-lg shadow-lg sm:p-6">
+            <!-- Demo Products Section -->
+            <h2 class="text-lg font-semibold text-gray-700 mb-4">Purchased Products</h2>
+            <div class="flex items-center gap-4 mb-6">
+                <!-- Product 1 -->
+                <div class="bg-white p-4 shadow rounded-lg flex items-center">
+                    <i class="fas fa-laptop text-gray-700 text-4xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold text-gray-700">Laptop</p>
+                        <p class="text-sm text-gray-500">Quantity: 1</p>
+                        <p class="text-sm text-gray-500">Price: $50.00</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white p-4 shadow rounded-lg flex items-center">
+                    <i class="fas fa-mobile-alt text-gray-700 text-4xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold text-gray-700">Mobile Phone</p>
+                        <p class="text-sm text-gray-500">Quantity: 2</p>
+                        <p class="text-sm text-gray-500">Price: $100.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="p-6 bg-gray-50 shadow rounded-lg">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Order Summary</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between">
+                        <p class="text-gray-600">Total Quantity</p>
+                        <p class="font-semibold text-gray-700">3</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="text-gray-600">Sub Total</p>
+                        <p class="font-semibold text-gray-700">$150.00</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="text-gray-600">Shipping</p>
+                        <p class="font-semibold text-gray-700">$15.00</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="text-gray-600">Payable Amount</p>
+                        <p class="font-semibold text-gray-700">$165.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <!-- Order Summary -->
-    <div class="mt-8 p-6 bg-gray-50 shadow rounded-lg">
-      <h2 class="text-lg font-semibold text-gray-700 mb-4">Order Summary</h2>
-      <div class="space-y-4">
-        <div class="flex justify-between">
-          <p class="text-gray-600">Total Quantity</p>
-          <p class="font-semibold text-gray-700">3</p>
-        </div>
-        <div class="flex justify-between">
-          <p class="text-gray-600">Sub Total</p>
-          <p class="font-semibold text-gray-700">$150.00</p>
-        </div>
-        <div class="flex justify-between">
-          <p class="text-gray-600">Shipping</p>
-          <p class="font-semibold text-gray-700">$15.00</p>
-        </div>
-        <div class="flex justify-between">
-          <p class="text-gray-600">Payable Amount</p>
-          <p class="font-semibold text-gray-700">$165.00</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- main -->
+  <!-- footer -->
   <footer class="bg-gray-800 text-white py-10">
     <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-6">
       <!-- Column 1: DESIGNER WEAR -->
@@ -300,7 +314,7 @@
       <p>&copy; 2024 ALTABANU. All rights reserved.</p>
     </div>
   </footer>
-
+  <!-- footer -->
   <!-- script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./dist/main.js"></script>
