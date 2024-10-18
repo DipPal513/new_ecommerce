@@ -118,8 +118,8 @@
   <!-- header -->
   <!-- My Orders Section -->
   <section class="max-w-4xl mx-auto p-2 sm:p-6 mt-6  rounded-md ">
-    <div class="bg-white shadow-xl flex mb-3 flex-wrap items-center justify-between px-2 py-2">
-      <div class="flex flex-col bg-white  sm:flex-row justify-between items-center mb-4">
+    <div class="bg-white shadow-xl flex mb-3 flex-wrap items-center justify-between px-3 rounded-lg py-3">
+      <div class="flex flex-col bg-white gap-3 justify-between items-center mb-4">
         <h1 class="text-xl font-bold mb-4 sm:mb-0">
           My Orders 
           <span class="text-sm font-normal">(Your Total Order: 2)</span>
@@ -143,7 +143,7 @@
         </div>
       </div>
     </div>
-   <div class="bg-white shadow-lg pt-5">
+   <div class="bg-white shadow-lg pt-5 rounded-lg" >
  
 
     <!-- Orders List -->
@@ -164,22 +164,29 @@
         </div>
 
         <!-- Product -->
-        <div class="flex flex-col items-start">
-          <img src="https://via.placeholder.com/100x150" alt="PHP Book" class="w-24 h-36 object-cover rounded-md mb-2">
-          <h2 class="text-sm font-semibold">পিএইচপি ওয়েব প্রোগ্রামিং</h2>
+        <div class="flex sm:flex-row gap-2 flex-col items-start">
+          <div class="">
+            <img src="https://via.placeholder.com/100x150" alt="PHP Book" class="w-24 h-36 object-cover rounded-md mb-2">
+          <h2 class="text-sm font-semibold break-words w-3/5">পিএইচপি ওয়েব প্রোগ্রামিং পিএইচপি ওয়েব প্রোগ্রামিং</h2>
           <p class="text-gray-500">TK. 345 <span class="text-red-600">(25% Off)</span></p>
         </div>
+          <div>
+            <img src="https://via.placeholder.com/100x150" alt="PHP Book" class="w-24 h-36 object-cover rounded-md mb-2">
+          <h2 class="text-sm font-semibold break-words w-3/5">পিএইচপি ওয়েব প্রোগ্রামিং পিএইচপি ওয়েব প্রোগ্রামিং</h2>
+          <p class="text-gray-500">TK. 345 <span class="text-red-600">(25% Off)</span></p>
+        </div>
+          </div>
       </div>
 
       <!-- Order 2 -->
-      <div class="p-4 bg-gray-50 rounded-md shadow-md">
-        <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+      <div class="p-4 border-t-2 border-gray-100  shadow-md">
+        <div class="flex flex-col justify-between items-start mb-4"><div class="flex space-x-2 mb-2">
+          <span class="bg-red-500 text-white px-3 py-1 rounded-md">RETURNED</span>
+        </div>
           <p>Your Order ID: 
             <a href="#" class="text-green-600">37167242941484</a> (2 items)
           </p>
-          <div class="flex space-x-2">
-            <span class="bg-red-500 text-white px-3 py-1 rounded-md">RETURNED</span>
-          </div>
+          
         </div>
 
         <!-- Products -->
